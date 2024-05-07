@@ -10,6 +10,7 @@
     "test": "lerna run tert",
     "build:font": "lerna run build --scope=font-clip",
     "build:img": "lerna run build --scope=img-batch-compression",
+    "build:svg2ttf": "lerna run build --scope=svg2ttf",
     "test:color": "lerna run test --scope=color-test"
   },
   "dependencies": {},
