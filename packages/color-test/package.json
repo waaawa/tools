@@ -1,0 +1,14 @@
+{
+  "name": "color-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "bootstrap": "echo \"Error: no test specified\"",
+    "build": "echo \"Error: no test specified\"",
+    "test": "node ./index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

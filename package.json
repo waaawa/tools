@@ -1,0 +1,19 @@
+{
+  "name": "root",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "bootstrap": "lerna run bootstrap",
+    "build": "lerna run build",
+    "test": "lerna run tert",
+    "build:font": "lerna run build --scope=font-clip",
+    "build:img": "lerna run build --scope=img-batch-compression",
+    "test:color": "lerna run test --scope=color-test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "lerna": "^8.1.2"
+  }
+}
