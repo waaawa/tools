@@ -11,6 +11,7 @@
     "build:font": "lerna run build --scope=font-clip",
     "build:img": "lerna run build --scope=img-batch-compression",
     "build:svg2ttf": "lerna run build --scope=svg2ttf",
+    "build:ttf2woff2": "lerna run build --scope=ttf2woff2-tools",
     "test:color": "lerna run test --scope=color-test"
   },
   "dependencies": {},
