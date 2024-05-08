@@ -9,7 +9,7 @@ svgtofont({
   src: path.resolve(__dirname, "svg/from"), // svg path
   dist: path.resolve(__dirname, "svg/to"), // output path
   styleTemplates: path.resolve(__dirname, "styles"), // file templates path (optional)
-  fontName: "htnova-yuan", // font name
+  fontName: "yuan", // font name
   css: true, // Create CSS files.
   useNameAsUnicode: true,
   svgicons2svgfont: {
