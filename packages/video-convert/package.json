@@ -1,0 +1,17 @@
+{
+  "name": "@wawawwaa/video-convert",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib.js",
+  "scripts": {
+    "bootstrap": "npm i",
+    "build": "node ./index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@wawawwaa/utils": "^1.0.0"
+  }
+}

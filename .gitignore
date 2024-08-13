@@ -1,4 +1,4 @@
 node_modules/
 .nx/
-**/from
-**/to
+**/from/**
+**/to/**
