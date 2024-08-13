@@ -2,7 +2,7 @@ var fs = require("fs");
 var path = require("path");
 var ttf2woff2 = require("ttf2woff2");
 
-const name = 'PingFang Regular';
+const name = 'MicrosoftYaHei-01';
 
 var input = fs.readFileSync(path.relative(__dirname, `from/${name}.ttf`));
 

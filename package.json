@@ -11,8 +11,12 @@
     "build:font": "lerna run build --scope=font-clip",
     "build:img": "lerna run build --scope=img-batch-compression",
     "build:svg2ttf": "lerna run build --scope=svg2ttf",
-    "build:ttf2woff2": "lerna run build --scope=ttf2woff2-tools",
-    "test:color": "lerna run test --scope=color-test"
+    "build:kv-reversal": "lerna run build --scope=object-kv-reversal",
+    "build:i18n": "lerna run build --scope=generate-i18n-json",
+    "build:extract-chinese": "lerna run build --scope=extract-chinese",
+    "build:ttf2woff2": "node --max_old_space_size=4096 ./node_modules/lerna/dist/cli.js run build --scope=ttf2woff2-tools",
+    "test:color": "lerna run test --scope=color-test",
+    "test:time-match": "lerna run test --scope=time-match"
   },
   "dependencies": {},
   "devDependencies": {
