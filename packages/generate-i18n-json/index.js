@@ -16,7 +16,7 @@ const {
 } = require("./tools");
 const { isEmpty } = require("./is");
 
-const from = path.join(__dirname, "from/json");
+const from = path.join(__dirname, "from/origin");
 const outDir = path.join(__dirname, "to");
 
 const files = getFiles(from);
