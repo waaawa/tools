@@ -95,7 +95,7 @@ const cfgs = [
   {
     output: path.resolve(__dirname, "imgs/to/mobile-image"),
     width: 1024,
-    quality: 100,
+    quality: 90,
     sourceDir,
   },
 ];
