@@ -64,7 +64,16 @@ function batchCompression({ sourceDir, output, width, quality }) {
 
         if (metadata.width > width) tool.resize(width);
 
-        tool.jpeg({ quality }); // 调整质量为80（默认为100），数值越低，压缩率越高，图片质量越低
+        tool.toFormat(ext.split(".")[1], { quality });
+
+        // if (["jpg", "jpeg"].includes(ext)) {
+        //   tool.jpeg({ quality }); // 调整质量为80（默认为100），数值越低，压缩率越高，图片质量越低
+        // }
+
+        // if (ext === "png") {
+        //   tool.toFormat("png", { quality });
+        //   tool.png({ quality });
+        // }
 
         tool.toFile(destinationPath, (err, info) => {
           if (err) {
