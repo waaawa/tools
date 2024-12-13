@@ -1,7 +1,7 @@
 const { zh, en, fr, es, ru, ar } = require("./from/langs");
 
 module.exports = {
-  zh,
+  "zh-CN": zh,
   en,
   fr,
   es,
