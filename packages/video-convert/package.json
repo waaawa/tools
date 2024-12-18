@@ -6,6 +6,7 @@
   "scripts": {
     "bootstrap": "npm i",
     "build": "node ./index.js",
+    "build:compress": "node ./compress.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

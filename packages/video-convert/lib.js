@@ -32,12 +32,51 @@ function convertM3U8(from, to) {
 
   exec(cmd, (error, stdout, stderr) => {
     if (error) {
-      console.error(`执行的错误: ${error}`);
-      return;
+      console.error(`执行错误: ${error}`);
     }
-    console.log(`标准输出: ${stdout}`);
+
+    if (stdout) {
+      console.log(`标准输出: ${stdout}`);
+    }
+
     if (stderr) {
       console.error(`标准错误输出: ${stderr}`);
+    }
+  });
+}
+
+function compressVideo(from, to) {
+  fileTools.createDir(to);
+
+  const cmd = `ffmpeg -i ${from} -r 30 ${to}`;
+
+  exec(cmd, (error, stdout, stderr) => {
+    if (error) {
+      console.error(`执行错误: ${error}`);
+    }
+
+    if (stdout) {
+      console.log(`标准输出: ${stdout}`);
+    }
+
+    if (stderr) {
+      console.error(`标准错误输出: ${stderr}`);
+    }
+  });
+}
+
+function compressVideoByDir(from, to) {
+  const list = fileTools.getFiles(from);
+
+  list.forEach((e) => {
+    if (fileTools.isFile(e) && isMp4Ext(e)) {
+      console.log("file", e);
+
+      const url = fileTools.getDirectory(e).replace(from, to);
+
+      compressVideo(e, path.join(url, fileTools.getFileNameAndExt(e)));
+    } else if (fileTools.isDirectory(e)) {
+      console.log("directory", e);
     }
   });
 }
@@ -45,4 +84,6 @@ function convertM3U8(from, to) {
 module.exports = {
   convertM3U8,
   convertM3U8ByDir,
+  compressVideo,
+  compressVideoByDir,
 };

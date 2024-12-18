@@ -1,9 +1,9 @@
 const fs = require("fs");
 const path = require("path");
 
-// const dirs = [path.join(__dirname, "from")];
+const dirs = [path.join(__dirname, "from")];
 
-const dirs = ["D:/work/htvision-web/src/layout/rg05-action"];
+// const dirs = ["D:/work/htvision-web/src/layout/rg05-action"];
 
 const outDir = path.join(__dirname, "to");
 
@@ -116,9 +116,13 @@ function handler(filePath, outPath) {
           return map;
         }, {});
 
-        writeFile(path.join(outDir, "list.json"), JSON.stringify(res), () => {
-          console.log(`写入${filePath}完成`);
-        });
+        writeFile(
+          path.join(outDir, "list.json"),
+          JSON.stringify(res, null, 2),
+          () => {
+            console.log(`写入${filePath}完成`);
+          }
+        );
       }
       return;
     }

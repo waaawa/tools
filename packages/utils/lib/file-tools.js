@@ -55,8 +55,6 @@ function readJsonFile(filePath, callback) {
 function createDir(filePath) {
   const dir = path.dirname(filePath);
 
-  console.log(fs.existsSync(dir), dir, "==================");
-
   // 检查目录是否存在
   if (!fs.existsSync(dir)) {
     // 目录不存在，创建目录

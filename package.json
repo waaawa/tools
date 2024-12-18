@@ -16,6 +16,7 @@
     "build:extract-chinese": "lerna run build --scope=extract-chinese",
     "build:ttf2woff2": "node --max_old_space_size=4096 ./node_modules/lerna/dist/cli.js run build --scope=ttf2woff2-tools",
     "build:video-convert": "lerna run build --scope=@wawawwaa/video-convert",
+    "build:video-compress": "lerna run build:compress --scope=@wawawwaa/video-convert",
     "test:color": "lerna run test --scope=color-test",
     "test:time-match": "lerna run test --scope=time-match"
   },
